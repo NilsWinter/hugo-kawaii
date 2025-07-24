@@ -6,7 +6,7 @@ homepage = "https://github.com/yuis-ice/hugo-kawaii"
 demosite = "https://hugo-kawaii.pages.dev/"
 tags = ["blog", "minimal", "dark"]
 features = ["responsive", "blog", "portfolio", "modern", "animations", "customizable", "fast"]
-min_version = "0.110.0"
+min_version = "0.147.0"
 
 [author]
   name = "yuis-ice"
