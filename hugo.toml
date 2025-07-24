@@ -18,7 +18,7 @@ enableEmoji = true
 
 [params]
   description = "A showcase of the beautiful Kawaii Hugo theme"
-  author = "Kawaii Theme Creator"
+  author = "yuis-ice"
   
   theme_toggle = true
   search = true
@@ -32,19 +32,19 @@ enableEmoji = true
   
   [[params.social]]
     name = "github"
-    url = "https://github.com/username/kawaii-theme"
+    url = "https://github.com/yuis-ice/hugo-kawaii"
   
   [[params.social]]
     name = "twitter"
-    url = "https://twitter.com/username"
+    url = "https://twitter.com/yuis_ice"
   
   [[params.footer_links]]
     name = "Documentation"
-    url = "/docs"
+    url = "https://github.com/yuis-ice/hugo-kawaii#readme"
   
   [[params.footer_links]]
     name = "Download"
-    url = "https://github.com/username/kawaii-theme"
+    url = "https://github.com/yuis-ice/hugo-kawaii"
   
   [[params.featured_sections]]
     title = "Beautiful Design"
@@ -56,7 +56,7 @@ enableEmoji = true
     title = "Developer Friendly"
     description = "Built with Hugo, easy to customize and extend for your needs"
     icon = "⚡"
-    link = "/docs"
+    link = "https://github.com/yuis-ice/hugo-kawaii#readme"
   
   [[params.featured_sections]]
     title = "Mobile First"
