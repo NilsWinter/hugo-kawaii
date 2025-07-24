@@ -75,3 +75,8 @@ exampleSite/.hugo_build.lock
 /.claude
 exampleSite/themes
 /.note
+
+# Development scripts
+exampleSite/startup.sh
+
+*/note.md
