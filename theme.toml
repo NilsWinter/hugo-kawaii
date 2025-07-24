@@ -1,0 +1,12 @@
+name = "Kawaii"
+license = "MIT"
+licenselink = "https://github.com/username/kawaii-theme/blob/main/LICENSE"
+description = "A modern and cool Hugo theme with kawaii aesthetics"
+homepage = "https://github.com/username/kawaii-theme"
+tags = ["blog", "responsive", "modern", "kawaii", "clean", "dark-mode", "portfolio"]
+features = ["responsive", "dark-mode", "search", "blog", "portfolio", "modern-design", "animations"]
+min_version = "0.120.0"
+
+[author]
+  name = "Kawaii Theme"
+  homepage = "https://github.com/username/kawaii-theme"
