@@ -4,7 +4,7 @@ A modern and cool Hugo theme with beautiful kawaii aesthetics, dark mode support
 
 ## 📸 Preview
 
-Visit the [example site demo](https://yuis-ice.github.io/hugo-kawaii/) to see the theme in action, or check out the `exampleSite` directory for a complete working example.
+Visit the [live demo](https://hugo-kawaii.pages.dev/) to see the theme in action, or check out the `exampleSite` directory for a complete working example.
 
 ## ✨ Features
 
