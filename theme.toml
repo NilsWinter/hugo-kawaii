@@ -1,12 +1,13 @@
 name = "Kawaii"
 license = "MIT"
-licenselink = "https://github.com/username/kawaii-theme/blob/main/LICENSE"
-description = "A modern and cool Hugo theme with kawaii aesthetics"
-homepage = "https://github.com/username/kawaii-theme"
-tags = ["blog", "responsive", "modern", "kawaii", "clean", "dark-mode", "portfolio"]
-features = ["responsive", "dark-mode", "search", "blog", "portfolio", "modern-design", "animations"]
+licenselink = "https://github.com/yuis-ice/hugo-kawaii/blob/master/LICENSE"
+description = "A modern and cool Hugo theme with beautiful kawaii aesthetics, dark mode support, and delightful animations"
+homepage = "https://github.com/yuis-ice/hugo-kawaii"
+demosite = "https://yuis-ice.github.io/hugo-kawaii/"
+tags = ["blog", "responsive", "modern", "kawaii", "clean", "dark-mode", "portfolio", "minimal"]
+features = ["responsive", "dark-mode", "search", "blog", "portfolio", "modern-design", "animations", "customizable", "fast"]
 min_version = "0.120.0"
 
 [author]
-  name = "Kawaii Theme"
-  homepage = "https://github.com/username/kawaii-theme"
+  name = "yuis-ice"
+  homepage = "https://github.com/yuis-ice"
