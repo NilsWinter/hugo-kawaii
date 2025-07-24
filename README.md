@@ -4,6 +4,8 @@ A modern and cool Hugo theme with beautiful kawaii aesthetics, dark mode support
 
 ## 📸 Preview
 
+![Kawaii Theme Screenshot](https://raw.githubusercontent.com/yuis-ice/hugo-kawaii/master/images/screenshot.png)
+
 Visit the [live demo](https://hugo-kawaii.pages.dev/) to see the theme in action, or check out the `exampleSite` directory for a complete working example.
 
 ## ✨ Features
@@ -41,7 +43,7 @@ Visit the [live demo](https://hugo-kawaii.pages.dev/) to see the theme in action
 
 ## 📋 Requirements
 
-- Hugo Extended version 0.120.0 or higher
+- Hugo Extended version 0.147.0 or higher
 - Git (for theme installation)
 
 ## 🎨 Configuration
