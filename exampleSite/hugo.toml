@@ -1,4 +1,4 @@
-baseURL = "https://kawaii-theme-demo.example.com"
+baseURL = "https://hugo-kawaii.pages.dev"
 languageCode = "en-us"
 title = "Kawaii Theme Demo"
 theme = "kawaii"

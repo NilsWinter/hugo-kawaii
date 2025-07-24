@@ -73,3 +73,5 @@ exampleSite/.hugo_build.lock
 
 /.meta
 /.claude
+exampleSite/themes
+/.note
