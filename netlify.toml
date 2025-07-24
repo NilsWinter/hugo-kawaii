@@ -1,0 +1,13 @@
+[build]
+  publish = "exampleSite/public"
+  command = "cd exampleSite && hugo --themesDir ../.. --theme kawaii-theme --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.147.0"
+  HUGO_EXTENDED = "true"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+  HUGO_ENV = "production"
