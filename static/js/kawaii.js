@@ -211,7 +211,7 @@
         searchModal.innerHTML = `
             <div class="kawaii-search-overlay">
                 <div class="kawaii-search-container">
-                    <input type="text" class="kawaii-search-input" placeholder="Search posts..." />
+                    <input type="text" class="kawaii-search-input" placeholder="Search publications..." />
                     <div class="kawaii-search-results"></div>
                     <button class="kawaii-search-close">×</button>
                 </div>

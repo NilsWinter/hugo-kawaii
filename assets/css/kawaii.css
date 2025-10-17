@@ -1,9 +1,10 @@
 /* Kawaii Theme - Modern & Cool Hugo Theme */
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* CSS Custom Properties */
 :root {
   /* Enhanced Color Palette */
-  --kawaii-primary: #ff6b9d;
+  --kawaii-primary: #1f2937;
   --kawaii-primary-hover: #ff4585;
   --kawaii-primary-light: #ffb3d1;
   --kawaii-primary-dark: #e55a8a;
@@ -25,7 +26,7 @@
   --kawaii-info: #3b82f6;
   
   /* Refined Gradients */
-  --kawaii-gradient-primary: linear-gradient(135deg, #ff6b9d 0%, #6366f1 100%);
+  --kawaii-gradient-primary: linear-gradient(135deg, #BE5B50 0%, #BE5B50 100%);
   --kawaii-gradient-secondary: linear-gradient(135deg, #06d6a0 0%, #3b82f6 100%);
   --kawaii-gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --kawaii-gradient-warm: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
@@ -87,9 +88,9 @@
   --kawaii-spacing-3xl: var(--kawaii-spacing-16);
   
   /* Enhanced Typography Scale */
-  --kawaii-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-  --kawaii-font-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-  
+  --kawaii-font-family: 'Raleway', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --kawaii-font-mono: 'Raleway', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+
   /* Font sizes */
   --kawaii-text-xs: 0.75rem;     /* 12px */
   --kawaii-text-sm: 0.875rem;    /* 14px */
@@ -163,14 +164,17 @@
 
 /* Enhanced Dark Theme */
 [data-theme="dark"] {
+  --kawaii-primary: #FFF0DD;
+  --kawaii-secondary: #FFF0DD;
+
   --kawaii-text-primary: #f9fafb;
   --kawaii-text-secondary: #e5e7eb;
   --kawaii-text-tertiary: #d1d5db;
   --kawaii-text-muted: #9ca3af;
-  --kawaii-text-inverse: #111827;
+  --kawaii-text-inverse: #f9fafb;
   
-  --kawaii-bg-primary: #111827;
-  --kawaii-bg-secondary: #1f2937;
+  --kawaii-bg-primary: #252625;
+  --kawaii-bg-secondary: #202120;
   --kawaii-bg-tertiary: #374151;
   --kawaii-bg-quaternary: #4b5563;
   --kawaii-bg-overlay: rgba(255, 255, 255, 0.05);
@@ -714,7 +718,7 @@ hr::after {
 }
 
 [data-theme="dark"] .kawaii-header {
-  background: rgba(17, 24, 39, 0.95);
+  background: #202120;
 }
 
 .kawaii-nav {
@@ -831,7 +835,8 @@ hr::after {
 
 /* Hero Section */
 .kawaii-hero {
-  background: var(--kawaii-gradient-hero);
+  background-image: url("/images/background_image.png");
+  background-size: cover; /* make sure it fills the section */
   color: var(--kawaii-text-inverse);
   padding: var(--kawaii-spacing-3xl) var(--kawaii-spacing-lg);
   text-align: center;
@@ -867,69 +872,7 @@ hr::after {
   margin-top: var(--kawaii-spacing-xl);
 }
 
-.kawaii-hero-decoration {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
 
-.kawaii-floating-shapes {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.kawaii-shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.1;
-  animation: kawaii-float 6s ease-in-out infinite;
-}
-
-.kawaii-shape-1 {
-  width: 80px;
-  height: 80px;
-  background: #ff6b9d;
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.kawaii-shape-2 {
-  width: 60px;
-  height: 60px;
-  background: #6b73ff;
-  top: 60%;
-  right: 20%;
-  animation-delay: 2s;
-}
-
-.kawaii-shape-3 {
-  width: 40px;
-  height: 40px;
-  background: #00d4aa;
-  top: 30%;
-  right: 10%;
-  animation-delay: 4s;
-}
-
-.kawaii-shape-4 {
-  width: 100px;
-  height: 100px;
-  background: #ffa726;
-  bottom: 20%;
-  left: 20%;
-  animation-delay: 1s;
-}
-
-@keyframes kawaii-float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-}
 
 /* Buttons */
 .kawaii-btn {
@@ -974,6 +917,7 @@ hr::after {
 .kawaii-featured-sections {
   max-width: 1200px;
   margin: 0 auto;
+    margin-top: 50px;
   padding: var(--kawaii-spacing-3xl) var(--kawaii-spacing-lg);
 }
 
@@ -999,16 +943,19 @@ hr::after {
 .kawaii-section-link:hover {
   color: var(--kawaii-primary-hover);
 }
-
-/* Post Grid */
 .kawaii-posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--kawaii-spacing-xl);
+    display: grid;
+    grid-template-columns: 1fr; /* always one column */
+    gap: var(--kawaii-spacing-xl);
+    max-width: 800px; /* adjust to your taste */
+    margin: 0 auto;   /* center the grid on the page */
 }
 
 .kawaii-posts-grid-featured {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--kawaii-spacing-xl);
+    max-width: 1000px;
 }
 
 .kawaii-post-card {
@@ -1718,7 +1665,7 @@ select:focus {
 }
 
 [data-theme="dark"] .kawaii-header-scrolled {
-  background: rgba(26, 32, 44, 0.95);
+  background: #202120;
 }
 
 .kawaii-header-hidden {

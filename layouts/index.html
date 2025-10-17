@@ -27,16 +27,35 @@
     </div>
 </div>
 
-{{ $recent := where .Site.RegularPages "Type" "posts" | first 6 }}
-{{ if $recent }}
+{{ if .Site.Params.featured_sections }}
+<section class="kawaii-featured-sections">
+    {{ range .Site.Params.featured_sections }}
+    <div class="kawaii-feature-card">
+        <div class="kawaii-feature-icon">{{ .icon | default "" }}</div>
+        <h3 class="kawaii-feature-title">{{ .title }}</h3>
+        <p class="kawaii-feature-description">{{ .description }}</p>
+        {{ if .link }}
+        <a href="{{ .link }}" class="kawaii-feature-link">Learn more →</a>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+
+{{/* Collect publications in the `publications` section, then filter featured */}}
+{{ $pubs := where .Site.RegularPages "Section" "publications" }}
+{{ $featured := where $pubs ".Params.featured" true }}
+{{ $featured := first 6 (sort $featured "Date" "desc") }}
+
+{{ with $featured }}
 <section class="kawaii-recent-posts">
     <div class="kawaii-section-header">
-        <h2 class="kawaii-section-title">Recent Posts</h2>
-        <a href="/posts" class="kawaii-section-link">View all →</a>
+        <h2 class="kawaii-section-title">Recent Publications</h2>
+        <a href="/publications" class="kawaii-section-link">View all →</a>
     </div>
-    
+
     <div class="kawaii-posts-grid kawaii-posts-grid-featured">
-        {{ range $recent }}
+        {{ range . }}
         <article class="kawaii-post-card kawaii-post-card-featured">
             <div class="kawaii-card-content">
                 {{ if .Params.featured_image }}
@@ -44,26 +63,26 @@
                     <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" loading="lazy">
                 </div>
                 {{ end }}
-                
+
                 <div class="kawaii-card-text">
                     <h3 class="kawaii-card-title">
                         <a href="{{ .Permalink }}">{{ .Title }}</a>
                     </h3>
-                    
+
                     {{ if .Params.description }}
                     <p class="kawaii-card-description">{{ .Params.description }}</p>
                     {{ else }}
                     <p class="kawaii-card-description">{{ .Summary | truncate 100 }}</p>
                     {{ end }}
-                    
+
                     <div class="kawaii-card-meta">
-                        <time class="kawaii-card-date" datetime="{{ .Date.Format "2006-01-02" }}">
-                            {{ .Date.Format "Jan 2" }}
+                        <time class="kawaii-card-date" datetime='{{ .Date.Format "2006-01-02" }}'>
+                            {{ .Date.Format "2006" }}
                         </time>
-                        
-                        {{ if .Params.tags }}
+
+                        {{ with .Params.tags }}
                         <div class="kawaii-card-tags">
-                            {{ range first 2 .Params.tags }}
+                            {{ range first 2 . }}
                             <span class="kawaii-tag kawaii-tag-small">#{{ . }}</span>
                             {{ end }}
                         </div>
@@ -74,21 +93,6 @@
         </article>
         {{ end }}
     </div>
-</section>
-{{ end }}
-
-{{ if .Site.Params.featured_sections }}
-<section class="kawaii-featured-sections">
-    {{ range .Site.Params.featured_sections }}
-    <div class="kawaii-feature-card">
-        <div class="kawaii-feature-icon">{{ .icon | default "✨" }}</div>
-        <h3 class="kawaii-feature-title">{{ .title }}</h3>
-        <p class="kawaii-feature-description">{{ .description }}</p>
-        {{ if .link }}
-        <a href="{{ .link }}" class="kawaii-feature-link">Learn more →</a>
-        {{ end }}
-    </div>
-    {{ end }}
 </section>
 {{ end }}
 {{ end }}
