@@ -5,9 +5,9 @@
 :root {
   /* Enhanced Color Palette */
   --kawaii-primary: #1f2937;
-  --kawaii-primary-hover: #ff4585;
-  --kawaii-primary-light: #ffb3d1;
-  --kawaii-primary-dark: #e55a8a;
+  --kawaii-primary-hover: #BE5B50;
+  --kawaii-primary-light: #BE5B50;
+  --kawaii-primary-dark: #BE5B50;
   
   --kawaii-secondary: #6366f1;
   --kawaii-secondary-hover: #4f46e5;
@@ -83,11 +83,13 @@
   --kawaii-spacing-sm: var(--kawaii-spacing-2);
   --kawaii-spacing-md: var(--kawaii-spacing-4);
   --kawaii-spacing-lg: var(--kawaii-spacing-6);
+  --kawaii-spacing-vlg: var(--kawaii-spacing-8);
   --kawaii-spacing-xl: var(--kawaii-spacing-8);
   --kawaii-spacing-2xl: var(--kawaii-spacing-12);
   --kawaii-spacing-3xl: var(--kawaii-spacing-16);
-  
-  /* Enhanced Typography Scale */
+  --kawaii-spacing-4xl: var(--kawaii-spacing-24);
+
+    /* Enhanced Typography Scale */
   --kawaii-font-family: 'Raleway', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
   --kawaii-font-mono: 'Raleway', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 
@@ -835,15 +837,21 @@ hr::after {
 
 /* Hero Section */
 .kawaii-hero {
-  background-image: url("/images/background_image.png");
+  background-image: url("/images/brain-background.jpg");
   background-size: cover; /* make sure it fills the section */
   color: var(--kawaii-text-inverse);
-  padding: var(--kawaii-spacing-3xl) var(--kawaii-spacing-lg);
+  padding: var(--kawaii-spacing-4xl) var(--kawaii-spacing-vlg);
   text-align: center;
   position: relative;
   overflow: hidden;
 }
-
+.kawaii-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 1;
+}
 .kawaii-hero-content {
   max-width: 800px;
   margin: 0 auto;
